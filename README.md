@@ -20,7 +20,7 @@ Retrieve and summarize entity
 ###3. Summarize Given query
 ```js
 //parameters  @1: query term, e.g. "Forrest Gump"
-//            @2: query type, e.g. "Movie"
+//            @2: query type, e.g. "Movie" , this need to be one of the loaded index types
 //            @3: disambiguation page url, e.g. the corresponding DBpedia page "http://dbpedia.org/resource/Forrest_Gump"
 > String res = es.summarize("Forrest Gump", "Movie", "http://dbpedia.org/resource/Forrest_Gump");
 ```
