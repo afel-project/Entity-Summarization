@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: /home/ranyu/workspace/aor/src/main/java/index/io/LuceneInd
+ exSingleMachineRan.java
+Main-Class: index.io.LuceneIndexSingleMachineRan
+
