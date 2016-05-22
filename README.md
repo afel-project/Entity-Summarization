@@ -24,6 +24,9 @@ Retrieve and summarize entity
 //            @3: disambiguation page url, e.g. the corresponding DBpedia page "http://dbpedia.org/resource/Forrest_Gump"
 > String res = es.summarize("Forrest Gump", "Movie", "http://dbpedia.org/resource/Forrest_Gump");
 ```
+
+##Result
+
 The returned string "res" is in json format, e.g.
 ```js
 {
