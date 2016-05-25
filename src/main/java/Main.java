@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) throws ParseException, InterruptedException, IOException {
         EntitySummarization es = new EntitySummarization();
         es.load_index("Movie");
-        String res = es.summarize("Forrest Gump", "Movie", "http://dbpedia.org/resource/Forrest_Gump");
+        String res = es.summarize("The Stand-In", "Movie", "");
         System.out.println(res);
     }
 }

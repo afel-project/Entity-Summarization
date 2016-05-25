@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>aor</groupId>
-    <artifactId>aor</artifactId>
+    <groupId>EntitySummarization</groupId>
+    <artifactId>es</artifactId>
     <version>1.0</version>
 
 
@@ -20,6 +20,11 @@
         <repository>
             <id>nxparser-repo</id>
             <url>http://nxparser.googlecode.com/svn/snapshots</url>
+        </repository>
+        <repository>
+            <id>in-project</id>
+            <name>In Project Repo</name>
+            <url>/home/ranyu/workspace/entitySummarization/src/main/webapp/lib</url>
         </repository>
     </repositories>
 
@@ -37,9 +42,9 @@
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <descriptors>
-                        <descriptor>aor_for_hadoop.xml</descriptor>
-                    </descriptors>
+                    <!--<descriptors>-->
+                        <!--<descriptor>aor_for_hadoop.xml</descriptor>-->
+                    <!--</descriptors>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -56,6 +61,13 @@
                     </execution>
                 </executions>
             </plugin>
+            <!--<plugin>-->
+                <!--<artifactId>maven-war-plugin</artifactId>-->
+                <!--<version>2.6</version>-->
+                <!--<configuration>-->
+                    <!--<packagingIncludes>/home/ranyu/workspace/entitySummarization/src/main/webapp/WEB-INF/lib/*.jar</packagingIncludes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
         </plugins>
     </build>
 
@@ -122,11 +134,7 @@
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
         </dependency>
-        <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-client</artifactId>
-            <version>1.18.1</version>
-        </dependency>
+
         <dependency>
             <groupId>com.googlecode.netlib-java</groupId>
             <artifactId>netlib-java</artifactId>
@@ -255,6 +263,65 @@
             <artifactId>nxparser</artifactId>
             <version>1.2.5</version>
         </dependency>
+        <dependency>
+            <groupId>javax.ejb</groupId>
+            <artifactId>javax.ejb-api</artifactId>
+            <version>3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>8.0.35</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey.contribs</groupId>
+            <artifactId>jersey-multipart</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-core</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>1.19</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-server</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-bundle</artifactId>
+            <version>1.19</version>
+        </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>ajt</groupId>-->
+            <!--<artifactId>ajt</artifactId>-->
+            <!--<scope>system</scope>-->
+            <!--<version>2.11</version>-->
+            <!--<systemPath>/src/main/webapp/WEB-INF/lib/ajt-2.11.jar</systemPath>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javaml</groupId>-->
+            <!--<artifactId>javaml</artifactId>-->
+            <!--<scope>system</scope>-->
+            <!--<version>0.1.7</version>-->
+            <!--<systemPath>/src/main/webapp/WEB-INF/lib/javaml-0.1.7.jar</systemPath>-->
+        <!--</dependency>-->
+
     </dependencies>
 
 </project>

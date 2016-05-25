@@ -1,3 +1,0 @@
-Person http://schema.org/Person/additionalName http://schema.org/Person/familyName http://schema.org/Person/givenName http://schema.org/Person/alternateName http://schema.org/Person/description http://schema.org/Person/name
-Thing http://schema.org/alternateName http://schema.org/description http://schema.org/name
-Event http://schema.org/Event/name http://schema.org/Event/description
