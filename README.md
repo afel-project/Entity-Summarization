@@ -6,9 +6,32 @@ Retrieve and summarize entity
 - java 8
 - Intellij 14.1.4
 
+## Installation
 
+To setup the API follow these steps:
 
-##How to run
+```js
+> git clone https://github.com/ran-yu/entitySummarization.git
+> cd entitySummarization
+> mvn compile
+> mvn war:war
+```
+This will build the war file in the target directory.
+Copy the war into the deployment directory of your installed Java Servlet (e.g. apache-tomcat/webapps/) container.
+
+##Methods
+The individual methods are accessible through URL once the REST API setup succeeded. 
+
+The URL is formatted as: http://tmocatserver.xxx.yyy.de:8080/es-1.0/ES/entitySum?type=Movie&query=Forrest%20Gump&disambiguation=http://dbpedia.org/resource/Forrest_Gump
+
+###Query the summary for an entity:
+Method name: entitySum
+
+Parameters: {type, query, disambiguation}
+
+Output: A string in JASON format as the example in the end of this readme.
+
+##Entity Summarization class usage
 ###1. Creat an object:  
 ```js
 > EntitySummarization es = new EntitySummarization();
